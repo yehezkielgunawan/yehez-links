@@ -6,14 +6,14 @@ const urlList = await getCollection("links");
 ---
 
 <Layout title="Yehezgun's Links">
-  <main class="space-y-4">
+  <main class="space-y-4 mt-8">
     {
       urlList.map((url) => (
         <div class="p-2 border border-gray-600 rounded">
           <a
             href={url.data.url}
             target="_blank"
-            class="space-y-0.5 overflow-hidden text-ellipsis"
+            class="space-y-0.5 max-w-full line-clamp-2"
           >
             <h5>{url.data.name}</h5>
             <p>{url.data.url}</p>
